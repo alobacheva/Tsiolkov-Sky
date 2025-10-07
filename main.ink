@@ -1,5 +1,9 @@
 INCLUDE scene_1.ink
 INCLUDE scene_2.ink
+INCLUDE scene_3.ink
+
+VAR pirate = "none"
+
 
 -> intro
 === intro ===
