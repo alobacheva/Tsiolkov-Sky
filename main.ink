@@ -2,6 +2,12 @@ INCLUDE scene_1.ink
 INCLUDE scene_2.ink
 INCLUDE scene_3.ink
 INCLUDE scene_4.ink
+INCLUDE scene_5.ink
+INCLUDE endings.ink
+INCLUDE scene_6.ink
+
+
+
 
 
 VAR pirate = "none"
