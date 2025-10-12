@@ -1,4 +1,4 @@
-INCLUDE dice_logic.ink
+INCLUDE dice_rolling.ink
 
 Начало игры.
 -> test_opponent
