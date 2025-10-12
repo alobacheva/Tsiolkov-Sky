@@ -16,6 +16,10 @@ VAR current_char = ()
 // Буфер персонажей для построения селекторов в функциях *_dynamic
 VAR _char_buffer = ()
 
+/*
+* Функции-справочники свойств персонажей.
+*/
+
 // Имя и фамилия персонажа.
 === function char_name(id) ===
 { id:
@@ -50,7 +54,7 @@ VAR _char_buffer = ()
 }
 
 /*
- Короткие функции-обертки (cc – current char):
+* Короткие функции-обертки для текущего пользователя (cc – current char):
 */
 
 === function ccname ===
@@ -62,8 +66,12 @@ VAR _char_buffer = ()
 === function ccspec ===
 ~ return char_spec(current_char)
 
+
+/*
+* Сцены, варианты которых вычисляются динамически.
+*/
+
 // Сцена выбора персонажей.
-// Доступные варианты вычисляются динамически.
 === select_characters_dynamic(->redirect) ===
 ->select_variant(redirect)
 = select_variant(->redirect)
@@ -85,10 +93,7 @@ VAR _char_buffer = ()
     ~ player_chars += char_variant
 - ->select_variant(redirect)
 
-
 // Сцена выбора персонажа из имеющихся у игрока.
-// Выбранный персонаж сохраняется в глобальной переменной current_char.
-// Доступные варианты вычисляются динамически.
 === select_current_char_dynamic(->redirect) ===
 ~ _char_buffer = player_chars
 ->next_variant(redirect)
@@ -103,8 +108,11 @@ VAR _char_buffer = ()
 - ->redirect
 
 
+/*
+* Сцены, варианты которых перечисляются статически.
+*/
+
 // Сцена выбора персонажей.
-// Доступные варианты перечисляются статически.
 === select_characters_static(selected_char, ->redirect) ===
 { selected_char != ():
     ~ player_chars += selected_char
@@ -122,10 +130,7 @@ VAR _char_buffer = ()
 * [{char_name(Maria)}] -> select_characters_static(Maria, redirect)
 * [{char_name(Olga)}] -> select_characters_static(Olga, redirect)
 
-
 // Сцена выбора персонажа из имеющихся у игрока.
-// Выбранный персонаж сохраняется в глобальной переменной current_char.
-// Доступные варианты перечисляются статически.
 === select_current_char_static ===
 + {player_chars ? Alex} [{char_name(Alex)}]
     ~ current_char = Alex
