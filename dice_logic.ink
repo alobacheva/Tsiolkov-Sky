@@ -1,9 +1,4 @@
-// https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md#5-functions
-// https://docs.google.com/document/d/1z1IPEjJwUnOXMA8pzmazrqejflrxnY6Dd7GumHJSOMg/edit?tab=t.0
-// https://games.kruzhok.org/courses/5/completion?step=step-6-4
-
-Начало игры.
--> test_opponent
+// https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md
 
 // Бросок кубов. Возвращет лучшее d6 значение.
 //
@@ -74,15 +69,3 @@
 - else:
     ~ return player_result > opponent_result
 }
-
-=== test_function ===
-Тестирование функции.
-~ temp result = start_rolling(1, 1, 1, 0, 1, true)
-Итоговый результат броска кубов: {result}
-->END
-
-=== test_opponent ===
-Тестирование оппонентного броска.
-~ temp result = start_opposite_rolling(2, 3, 1, 1, 2, 3, 4, 0, true)
-Победил: {result: Игрок!|Оппонент =(}
-->END
