@@ -41,13 +41,26 @@ VAR _char_buffer = ()
 // Специализация персонажа.
 === function char_spec(id) ===
 { id:
-- Alex: ~ return tech_analyse
-- Igor: ~ return repair
-- Vadim: ~ return tech_analyse
-- Ekaterina: ~ return intuition
-- Maria: ~ return unstruct
-- Olga: ~ return repair
+- Alex: ~ return char_specs.tech_analyse
+- Igor: ~ return char_specs.repair
+- Vadim: ~ return char_specs.tech_analyse
+- Ekaterina: ~ return char_specs.intuition
+- Maria: ~ return char_specs.unstruct
+- Olga: ~ return char_specs.repair
 }
+
+/*
+ Короткие функции-обертки (cc – current char):
+*/
+
+=== function ccname ===
+~ return char_name(current_char)
+
+=== function cclaser ===
+~ return char_laser(current_char)
+
+=== function ccspec ===
+~ return char_spec(current_char)
 
 // Сцена выбора персонажей.
 // Доступные варианты вычисляются динамически.
