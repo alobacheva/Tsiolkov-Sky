@@ -1,4 +1,4 @@
-// Специализации персонажей:
+// Все доступные специализации персонажей:
 // - Технический анализ
 // - Навигация и пилотирование
 // - Интуиция
@@ -25,6 +25,28 @@ VAR _char_buffer = ()
 - Ekaterina: Екатерина Домова
 - Maria: Мария Лазарева
 - Olga: Ольга Вереск
+}
+
+// Характеристика лазера-чувства (0-5) персонажа.
+=== function char_laser(id) ===
+{ id:
+- Alex: ~ return 0
+- Igor: ~ return 2
+- Vadim: ~ return 4
+- Ekaterina: ~ return 5
+- Maria: ~ return 2
+- Olga: ~ return 3
+}
+
+// Специализация персонажа.
+=== function char_spec(id) ===
+{ id:
+- Alex: ~ return tech_analyse
+- Igor: ~ return repair
+- Vadim: ~ return tech_analyse
+- Ekaterina: ~ return intuition
+- Maria: ~ return unstruct
+- Olga: ~ return repair
 }
 
 // Сцена выбора персонажей.
