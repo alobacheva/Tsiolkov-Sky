@@ -1,4 +1,5 @@
 INCLUDE dice_logic.ink
+INCLUDE characters.ink
 INCLUDE scene_1.ink
 INCLUDE scene_2.ink
 INCLUDE scene_3.ink
