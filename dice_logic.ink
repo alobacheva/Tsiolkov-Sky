@@ -39,6 +39,23 @@
     ~ return best
 }
 
+
+// Бросок кубов. Возвращет булевый результат успешности броска.
+//
+// char - характеристика игрока.
+// speed / bonus_speed - выбранная и бонусная скорости (0 - медленно, 1 - быстро).
+// spec / bonus_spec - специализация персонажа и бонусная специализация.
+// bonus_dices - бонусные кубы, включая штраф (отрицательное значение).
+// laser - бросок на лазеры или чувства (true/false).
+=== function player_rolling(char, speed, bonus_speed, spec, bonus_spec, bonus_dices, laser) ===
+Бросок кубов игрока.
+~ temp result = start_rolling(speed, bonus_speed, spec, bonus_spec, bonus_dices, laser)
+{ laser == true:
+    ~ return result <= char
+- else:
+    ~ return result >= char
+}
+
 // Итерация оппозитных бросков. Возвращает булевое значение или повторно вызывает себя же.
 //
 // o_char, p_char - характиристики оппонента и игрока.
