@@ -1,3 +1,5 @@
+VAR current_speed = 0
+
 // Бросок кубов. Возвращет лучшее d6 значение.
 //
 // speed / bonus_speed - выбранная и бонусная скорости (0 - медленно, 1 - быстро).
@@ -54,6 +56,9 @@
     ~ return result >= char
 }
 
+=== function ccplayer_roll(bonus_speed, bonus_spec, bonus_dices, laser) ===
+~ return player_roll(cclaser(), current_speed, bonus_speed, ccspec(), bonus_spec, bonus_dices, laser)
+
 // Итерация оппозитных бросков. Возвращает булевое значение или повторно вызывает себя же.
 //
 // o_char, p_char - характиристики оппонента и игрока.
@@ -84,3 +89,6 @@
 - else:
     ~ return player_result > opponent_result
 }
+
+=== function ccopposite_roll(o_char, bonus_speed, o_spec, b_spec, bonus_dices, laser) ===
+~ return opposite_roll(o_char, cclaser(), current_speed, bonus_speed, ccspec(), o_spec, b_spec, bonus_dices, laser)
