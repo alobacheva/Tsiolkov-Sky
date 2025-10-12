@@ -7,8 +7,7 @@ INCLUDE scene_4.ink
 INCLUDE scene_5.ink
 INCLUDE endings.ink
 INCLUDE scene_6.ink
-
-
+INCLUDE dice_logic.ink
 
 
 VAR pirate = "none"
