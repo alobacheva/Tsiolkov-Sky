@@ -67,7 +67,7 @@ VAR current_speed = 0
 // bonus_dices - бонусные или штрафные кубы игрока.
 // laser - бросок на лазеры или чувства (true/false).
 === function opposite_roll(o_char, p_char, speed, bonus_speed, p_spec, o_spec, b_spec, bonus_dices, laser) ===
-Вводный текст ко всем оппозитным броскам.
+Вы проходите проверку и где-то в темноте противник тоже ее проходит.
 
 Оппонент: <>
 ~ temp opponent_dice = _start_rolling(1, bonus_speed, o_spec, b_spec, 0, laser)

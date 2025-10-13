@@ -14,6 +14,7 @@ INCLUDE scene_6.ink
 VAR pirate = "none"
 VAR orbit = 0
 VAR braking = 0
+VAR transmit = false
 
 -> intro
 === intro ===
