@@ -57,6 +57,7 @@ VAR current_speed = 0
 }
 
 === function ccplayer_roll(bonus_speed, bonus_spec, bonus_dices, laser) ===
+Бросок кубов.
 ~ return player_roll(cclaser(), current_speed, bonus_speed, ccspec(), bonus_spec, bonus_dices, laser)
 
 // Итерация оппозитных бросков. Возвращает булевое значение или повторно вызывает себя же.
@@ -67,7 +68,7 @@ VAR current_speed = 0
 // bonus_dices - бонусные или штрафные кубы игрока.
 // laser - бросок на лазеры или чувства (true/false).
 === function opposite_roll(o_char, p_char, speed, bonus_speed, p_spec, o_spec, b_spec, bonus_dices, laser) ===
-Вы проходите проверку и где-то в темноте противник тоже ее проходит.
+Бросок кубов игрока и где-то в темноте его противник тоже проходит проверку.
 
 Оппонент: <>
 ~ temp opponent_dice = _start_rolling(1, bonus_speed, o_spec, b_spec, 0, laser)
