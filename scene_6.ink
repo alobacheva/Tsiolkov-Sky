@@ -26,7 +26,7 @@
 Мы идём вслепую, но не впервые. {battery == 1: К счастью мы знаем, что аккмулятора уже летит в нашу сторону.|}
 
 // Проверка на FEELINGS, специализация: интуиция, скорость: медленно, бонус — если был успех в сцене 5.
-{ccplayer_roll(1, intro,battery,false):
+{ccplayer_roll(1, intuition,battery,false):
     -> success_base
 - else:
   -> fail_base 
